@@ -2,6 +2,7 @@ package guru.springframework.brewery.events;
 
 import guru.springframework.brewery.domain.BeerOrder;
 import guru.springframework.brewery.domain.OrderStatusEnum;
+import guru.springframework.brewery.web.model.BeerOrderDto;
 import org.springframework.context.ApplicationEvent;
 
 public class BeerOrderStatusChangeEvent extends ApplicationEvent {
@@ -15,5 +16,8 @@ public class BeerOrderStatusChangeEvent extends ApplicationEvent {
 
     public OrderStatusEnum getPreviousStatus() {
         return previousStatus;
+    }
+    public BeerOrder getBeerOrder() {
+        return (BeerOrder) this.source;
     }
 }

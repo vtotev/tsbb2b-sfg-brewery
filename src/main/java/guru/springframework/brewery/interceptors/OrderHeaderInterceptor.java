@@ -3,6 +3,7 @@ package guru.springframework.brewery.interceptors;
 import guru.springframework.brewery.domain.BeerOrder;
 import guru.springframework.brewery.domain.OrderStatusEnum;
 import guru.springframework.brewery.events.BeerOrderStatusChangeEvent;
+import guru.springframework.brewery.web.model.BeerOrderDto;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.EmptyInterceptor;
 import org.hibernate.type.Type;
